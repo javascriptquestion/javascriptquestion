@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>Javascript Question</title>
+		<link rel="shortcut icon" ng-href="assets/images/Javascriptinterview.png" />
+
+		<!-- Bootstrap -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!--javascriptquestion.css -->
+		<link rel="stylesheet" href="assets/css/javascriptquestion.css" type="text/css" />
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- All fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Ewert' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular-sanitize.js"></script>
+
+		<script>
+			var javascriptquestionapp = angular.module("javascriptquestionapp", ['ngSanitize']);
+		</script>
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body ng-app="javascriptquestionapp">
+
+		<div class="container root-container">
+
+			<div class="page-header">
+				<h1><span class="javascriptquestion-websitetitle">Javascript Questions</span></h1>
+				<div class="esapiens-add" style="position: absolute;top:">
+					<a href="" target="_blank"> <img src="assets/images/esapiens.png" height="100%" width="100%" /> </a>
+				</div>
+			</div>
+
+			<script src="assets/js/javascriptquestion.js" type="text/javascript"></script>
+			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true" ng-controller="javascriptquestionCtrl">
+				<div class="panel panel-default" ng-repeat="javascriptquestion in javascriptquestions track by $index">
+					<div class="panel-heading javascriptquestion-headings" role="tab" id="heading_{{$index}}">
+						<h4 class="panel-title"><a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{$index}}" aria-expanded="true" aria-controls="collapse_{{$index}}"> {{javascriptquestion.question}} </a></h4>
+					</div>
+					<div id="collapse_{{$index}}" class="panel-collapse collapse" ng-class="{in:($index==0)}" role="tabpanel" aria-labelledby="heading_{{$index}}">
+						<div class="panel-body" ng-bind-html="javascriptquestion.answer"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</body>
+</html>

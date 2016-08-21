@@ -1,0 +1,22 @@
+body {
+	background-color: #ddd;
+}
+.root-container {
+	background-color: #fff;
+}
+.javascriptquestion-websitetitle {
+	color: #e91e63 !important;
+	/*color: #800 !important;*/
+	font-family: 'Ewert', cursive;
+}
+.javascriptquestion-websitesubtitle {
+	/*font-family: 'Ewert', cursive;*/
+	font-family: 'Cabin Sketch', cursive;
+}
+.javascriptquestion-headings {
+	background: #999 !important;
+	color: #fff !important;
+}
+.r {
+	border: 1px solid red;
+}
