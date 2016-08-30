@@ -1,11 +1,32 @@
 body {
-	background-color: #ddd;
+	background-color: #E9EBEE;
 }
+
 .root-container {
-	background-color: #fff;
+	background-color: rgb(244,244,244);
+	padding-bottom: 40px;
+}
+
+@media(max-width:767px){
+	.m-padd-lr-none {
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+
+#page_header {
+	background: #fff !important;		
+}
+#page_header .container {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .javascriptquestion-websitetitle {
-	color: #e91e63 !important;
+	color : #ed631e; 
+	/*color : #F0DB4F; */ /*  Yellow */ 
+	/*color: #e91e63 !important;*/
 	/*color: #800 !important;*/
 	font-family: 'Ewert', cursive;
 }
@@ -13,10 +34,86 @@ body {
 	/*font-family: 'Ewert', cursive;*/
 	font-family: 'Cabin Sketch', cursive;
 }
-.javascriptquestion-headings {
-	background: #999 !important;
-	color: #fff !important;
+.javascriptquestion-headings {	
+
 }
+.body-container {
+	margin-top: 70px;
+	padding-top: 20px;
+	padding-bottom: 20px; 
+	background: #fff;
+	box-shadow: 0px 0px 3px 1px #ddd;
+}
+
+
+.body {
+	margin-top: 70px;
+	padding-top: 30px;
+	padding-bottom: 10px; 
+}
+@media(max-width:767px){
+	.body {
+		margin-top: 50px !important;
+	}
+}
+
+.javascript-section {
+	margin-bottom: 30px;
+}
+.javascript-topics {
+	background: #fff;
+	padding: 20px;
+	border: 2px solid #ddd;
+	height: 270px;
+	text-align: justify;
+}
+.javascript-topics:hover {
+	cursor: pointer;
+	box-shadow: 0px 0px 2px #ED631E;
+}
+
 .r {
 	border: 1px solid red;
 }
+.pointer {
+	cursor: pointer;
+}
+
+#fixed_footer, #relative_footer {
+	background: #ed631e;
+	/* background: #F0DB4F; */ /* Yellow */
+	padding-top: 15px;
+}
+#fixed_footer .container, #relative_footer .container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.copyright {
+	color: #fff;
+	/*color: #000;*/
+	padding-bottom: 0px;
+}
+.social-link  {
+	color: #fff;
+}
+.social-link a {
+	color: #fff;
+	/*color: #000;*/
+	margin-left: 10px;
+}
+
+@media(max-width:767px){
+	#relative_footer {
+		margin-bottom: 0px;
+	}
+}
+
+
+
+
+/*23 Aug 2016
+File Usage
+426 / 250,000*/
+
+/*Disk Space Usage
+4.48 MB / 30 GB*/

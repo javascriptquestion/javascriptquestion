@@ -1,0 +1,6 @@
+<div class="col-sm-4 javascript-section" ng-repeat="javascripttopic in javascripttopics" ng-controller="home_ctrl">
+	<section class="javascript-topics">
+		<a href="#/{{javascripttopic.url}}"> <h1 class="text-center title">{{javascripttopic.title}}</h1> </a>
+		<span class="description" ng-bind-html="javascripttopic.description"></span>
+	</section>
+</div>
